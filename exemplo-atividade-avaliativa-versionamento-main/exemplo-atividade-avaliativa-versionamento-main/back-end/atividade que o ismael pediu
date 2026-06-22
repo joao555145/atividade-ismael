@@ -1,0 +1,12 @@
+Desenvolvimento Back-end
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Servidor funcionando!');
+});
+
+app.listen(3000);
+
+O que faz: Cria um servidor que responde com a mensagem "Servidor funcionando!".
