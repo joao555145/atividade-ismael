@@ -1,0 +1,13 @@
+
+
+import { Text, View } from 'react-native';
+
+export default function App() {
+  return (
+    <View>
+      <Text>Olá Mundo!</Text>
+    </View>
+  );
+}
+
+O que faz: Exibe a mensagem "Olá Mundo!" em um aplicativo mobile.
