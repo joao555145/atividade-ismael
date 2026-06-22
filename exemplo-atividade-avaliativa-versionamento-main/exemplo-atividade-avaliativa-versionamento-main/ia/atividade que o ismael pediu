@@ -1,0 +1,6 @@
+Inteligência Artificial
+
+texto = "Olá, mundo!"
+print("Resposta da IA:", texto)
+
+O que faz: Simula uma resposta simples de uma inteligência artificial.
