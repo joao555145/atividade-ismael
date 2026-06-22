@@ -1,45 +1,61 @@
-# 🗄️ Banco de Dados
+Banco de Dados
 
-## 📝 Descrição do Projeto/Atividade
-[Descreva brevemente o projeto prático que você escolheu colocar aqui. Ex: "Criação do esquema de banco de dados relacional para um sistema de biblioteca escolar, incluindo modelagem entidade-relacionamento (DER), tabelas de relacionamento e consultas SQL com junções."]
+📝 Descrição do Projeto/Atividade
 
----
+Criação de um banco de dados relacional para um sistema de biblioteca escolar, incluindo a modelagem das tabelas de alunos, livros e empréstimos. O projeto foi desenvolvido para armazenar e organizar informações de forma segura, permitindo consultas e relacionamentos entre os dados.
 
-## 🧠 Reflexão de Aprendizado
+🧠 Reflexão de Aprendizado
 
-### 1. O que aprendi?
-[Substitua este texto por sua resposta. Explique em suas palavras os conceitos de banco de dados que você aprendeu com esta atividade, tais como: modelagem relacional, chaves primárias (PK) e estrangeiras (FK), integridade referencial, comandos DDL (CREATE, ALTER) e DML (SELECT, INSERT, UPDATE, DELETE), agrupamentos e junções (JOINs).]
+1. O que aprendi?
 
-### 2. Para que serve (Por que aprendi)?
-[Substitua este texto por sua resposta. Explique por que a persistência e a estruturação de dados são essenciais para aplicações de software. Qual o valor de saber projetar um banco de dados otimizado e realizar consultas eficientes?]
+Aprendi os conceitos de modelagem relacional, criação de tabelas e relacionamentos utilizando chaves primárias (PK) e chaves estrangeiras (FK). Também aprendi a utilizar comandos SQL como CREATE, INSERT, SELECT, UPDATE e DELETE, além de realizar consultas mais avançadas utilizando JOINs para relacionar informações de diferentes tabelas. Com isso, compreendi a importância da integridade e da organização dos dados em um sistema.
 
----
+2. Para que serve (Por que aprendi)?
 
-## 🛠️ Tecnologias e Ferramentas Utilizadas
-*   [SGBD Utilizado, ex: MySQL, PostgreSQL, SQLite, SQL Server]
-*   [Ferramenta de Modelagem, ex: brModelo, dbdiagram.io, draw.io]
-*   DBeaver ou cliente SQL similar
+Aprender Banco de Dados é essencial porque praticamente todo sistema precisa armazenar informações de forma organizada e segura. Um banco de dados bem projetado permite consultas rápidas, evita a duplicação de informações e facilita a manutenção do sistema. Essa competência é muito valorizada no mercado, pois empresas dependem de dados para gerenciar clientes, produtos, vendas e diversos outros processos.
 
----
+🛠️ Tecnologias e Ferramentas Utilizadas
 
-## 💻 Demonstração e Como Rodar
+- MySQL
+- brModelo
+- DBeaver
+- Linguagem SQL
 
-### Código/Script SQL Relevante Comentado
-[Insira aqui um trecho de código SQL que demonstre consultas complexas (utilizando JOIN, GROUP BY ou subqueries) ou a criação do esquema físico, comentando as principais partes. Exemplo:]
-```sql
--- Exemplo de query SQL (substitua pela sua):
-SELECT 
+💻 Demonstração e Como Rodar
+
+Código/Script SQL Relevante Comentado
+
+-- Consulta os empréstimos juntamente com os dados do aluno e do livro
+
+SELECT
     alunos.nome AS nome_aluno,
     livros.titulo AS titulo_livro,
     emprestimos.data_emprestimo
-FROM emprestimos
-INNER JOIN alunos ON emprestimos.id_aluno = alunos.id
-INNER JOIN livros ON emprestimos.id_livro = livros.id
-WHERE emprestimos.status = 'pendente'
-ORDER BY emprestimos.data_emprestimo ASC;
-```
 
-### Instruções para Executar
-1. Copie o script DDL (como `schema.sql`) e execute em seu SGBD de preferência para gerar a estrutura de tabelas.
-2. Execute o script de população de dados (como `seed.sql`) para inserir os registros de teste.
-3. Utilize as queries documentadas no arquivo para realizar as consultas e verificar os resultados.
+FROM emprestimos
+
+INNER JOIN alunos
+ON emprestimos.id_aluno = alunos.id
+
+INNER JOIN livros
+ON emprestimos.id_livro = livros.id
+
+WHERE emprestimos.status = 'pendente'
+
+ORDER BY emprestimos.data_emprestimo ASC;
+
+Explicação:
+
+- "INNER JOIN": relaciona as tabelas através das chaves.
+- "WHERE": filtra apenas os empréstimos pendentes.
+- "ORDER BY": organiza os resultados pela data do empréstimo.
+
+Instruções para Executar
+
+1. Execute o arquivo "schema.sql" no MySQL para criar as tabelas.
+
+2. Execute o arquivo "seed.sql" para inserir os dados de teste.
+
+3. Utilize as consultas SQL disponíveis para verificar os resultados e testar os relacionamentos entre as tabelas.
+
+4. O projeto pode ser executado e visualizado utilizando o DBeaver ou outro cliente SQL compatível.
