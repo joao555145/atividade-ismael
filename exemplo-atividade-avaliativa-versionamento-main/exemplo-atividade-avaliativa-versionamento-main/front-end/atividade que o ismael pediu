@@ -1,0 +1,11 @@
+Desenvolvimento Front-end
+
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Meu Site</h1>
+  <button onclick="alert('Olá!')">Clique aqui</button>
+</body>
+</html>
+
+O que faz: Cria uma página simples com um botão que exibe uma mensagem.
