@@ -1,13 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Bom Dia</title>
 
-
-import { Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View>
-      <Text>Olá Mundo!</Text>
-    </View>
-  );
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:blue;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-O que faz: Exibe a mensagem "Olá Mundo!" em um aplicativo mobile.
+h1{
+    color:rgb(96, 96, 215);
+    font-size:60px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Bom dia</h1>
+
+</body>
+</html>
