@@ -1,54 +1,56 @@
-# 📱 Desenvolvimento Mobile
+Desenvolvimento Mobile
 
-## 📝 Descrição do Projeto/Atividade
-[Descreva brevemente o projeto prático que você escolheu colocar aqui. Ex: "Desenvolvimento de um aplicativo de previsão do tempo em React Native e TypeScript, integrado com a API OpenWeatherMap."]
+📝 Descrição do Projeto/Atividade
 
----
+Desenvolvimento de um aplicativo de previsão do tempo utilizando React Native e TypeScript, integrado a uma API para consultar informações climáticas em tempo real. O aplicativo permite pesquisar cidades e exibir dados como temperatura, clima e umidade.
 
-## 🧠 Reflexão de Aprendizado
+🧠 Reflexão de Aprendizado
 
-### 1. O que aprendi?
-[Substitua este texto por sua resposta. Explique em suas palavras os conceitos teóricos e práticos de desenvolvimento mobile que você aprendeu com esta atividade, tais como: componentes, Hooks do React (useState, useEffect), tratamento de estados assíncronos, consumo de APIs, estilização, etc.]
+1. O que aprendi?
 
-### 2. Para que serve (Por que aprendi)?
-[Substitua este texto por sua resposta. Explique qual a relevância de aprender a desenvolver aplicativos móveis nativos/híbridos com React Native para o mercado de trabalho atual. Qual problema real esta competência resolve no dia a dia corporativo?]
+Aprendi a desenvolver aplicativos móveis utilizando React Native e TypeScript, criando componentes reutilizáveis e organizando melhor o código. Também aprendi a utilizar Hooks como useState e useEffect para gerenciar estados e executar ações automáticas, além de consumir APIs para buscar dados externos. Desenvolvi conhecimentos sobre estilização de telas, tratamento de erros e atualização dinâmica das informações exibidas ao usuário.
 
----
+2. Para que serve (Por que aprendi)?
 
-## 🛠️ Tecnologias e Ferramentas Utilizadas
-*   React Native / Expo
-*   TypeScript
-*   [Outra biblioteca, ex: Axios, React Navigation, React Native Vector Icons]
+Aprender desenvolvimento mobile é importante porque grande parte dos usuários utiliza smartphones no dia a dia. Essa competência permite criar aplicativos para empresas e usuários finais, facilitando processos, aumentando a produtividade e oferecendo serviços digitais de forma prática e acessível. O mercado de trabalho busca cada vez mais profissionais capazes de desenvolver aplicações móveis modernas e eficientes.
 
----
+🛠️ Tecnologias e Ferramentas Utilizadas
 
-## 💻 Demonstração e Como Rodar
+- React Native / Expo
+- TypeScript
+- Fetch API
+- React Hooks (useState e useEffect)
 
-### Código Relevante Comentado
-[Insira aqui um trecho de código TypeScript/React Native que foi crucial para o projeto, comentando as linhas mais importantes para demonstrar seu entendimento. Exemplo:]
-```tsx
-// Exemplo de código (substitua pelo seu):
+💻 Demonstração e Como Rodar
+
+Código Relevante Comentado
+
 const fetchWeatherData = async (city: string) => {
   try {
-    setLoading(true);
-    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=SUA_API_KEY`);
-    const data = await response.json();
-    setWeather(data);
+    setLoading(true); // Inicia o carregamento
+
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=SUA_API_KEY`
+    );
+
+    const data = await response.json(); // Converte a resposta para JSON
+
+    setWeather(data); // Atualiza os dados do clima
   } catch (err) {
     setError('Não foi possível carregar os dados de clima.');
   } finally {
-    setLoading(false);
+    setLoading(false); // Finaliza o carregamento
   }
 };
-```
 
-### Instruções para Executar
-1. Instale as dependências na pasta do projeto:
-   ```bash
-   npm install
-   ```
-2. Inicialize o servidor de desenvolvimento do Expo:
-   ```bash
-   npx expo start
-   ```
-3. Use o aplicativo Expo Go em seu dispositivo móvel ou um emulador Android/iOS para visualizar.
+Instruções para Executar
+
+1. Instale as dependências:
+
+npm install
+
+2. Inicialize o servidor do Expo:
+
+npx expo start
+
+3. Utilize o aplicativo Expo Go no celular ou um emulador Android/iOS para visualizar a aplicação.
